@@ -1,5 +1,19 @@
 <?php
 echo"coucou";
+session_start();
+
+    include "BDD.php";
+    include "login.php";
+
+if($isconnect)
+{
+    echo "vous etes connecter";
+   
+}else{
+    echo "vous devez vous identifier";
+}
+
+
 
 ?>
 
@@ -11,6 +25,25 @@ echo"coucou";
     <title>Cour</title>
 </head>
 <body>
-    <p>boujour je suis dans l'html</p>
+   
+
+    <form action="" method="post">
+    
+    <p>
+    
+    <label for="user">user</label>
+    <input type="text" name="user">
+
+    <label for="password">MDP</label>
+    <input type="password" name="MDP">
+    
+    </p>
+
+    <p>
+    
+    <input type="submit" name="connexion">
+    </p>
+    
+    </form>
 </body>
 </html>
